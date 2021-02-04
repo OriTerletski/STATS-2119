@@ -1,0 +1,98 @@
+Ori Terletski 
+G23028954
+                            
+                                                  HW-2
+                                                  
+                        Github link: https://github.com/OriTerletski/STATS-2119
+                        
+colors = ["red", "orange", "blue", "black", "green"] #Question 1, printing each item of favorite colors list (I also included its index)
+print("The Color", colors[0], "has index", colors.index(colors[0]))
+print("The Color", colors[1], "has index", colors.index(colors[1]))
+print("The Color", colors[2], "has index", colors.index(colors[2]))
+print("The Color", colors[3], "has index", colors.index(colors[3]))
+print("The Color", colors[4], "has index", colors.index(colors[4]))
+
+The Color red has index 0
+The Color orange has index 1
+The Color blue has index 2
+The Color black has index 3
+The Color green has index 4                        
+
+
+n = 0 #Question 2
+for number in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
+    print("Printing out n using for loop")
+    n = n + number   
+print("finished for loop")
+
+Printing out n using for loop
+Printing out n using for loop
+Printing out n using for loop
+Printing out n using for loop
+Printing out n using for loop
+Printing out n using for loop
+Printing out n using for loop
+Printing out n using for loop
+Printing out n using for loop
+Printing out n using for loop
+finished for loop
+
+n = 0 #Question 4
+while n <= 10:
+    print("Printing out n using while loop")
+    n = n + 1
+else: print("n is greater than 10")
+
+Printing out n using while loop
+Printing out n using while loop
+Printing out n using while loop
+Printing out n using while loop
+Printing out n using while loop
+Printing out n using while loop
+Printing out n using while loop
+Printing out n using while loop
+Printing out n using while loop
+Printing out n using while loop
+Printing out n using while loop
+n is greater than 10
+
+n = 30 #Question 5
+sum = 0
+i = 1
+while i <= n:
+    sum = sum + i
+    print("i is", i, "sum is", sum)
+    i = i + 1
+print("The sum is", sum)
+
+i is 1 sum is 1
+i is 2 sum is 3
+i is 3 sum is 6
+i is 4 sum is 10
+i is 5 sum is 15
+i is 6 sum is 21
+i is 7 sum is 28
+i is 8 sum is 36
+i is 9 sum is 45
+i is 10 sum is 55
+i is 11 sum is 66
+i is 12 sum is 78
+i is 13 sum is 91
+i is 14 sum is 105
+i is 15 sum is 120
+i is 16 sum is 136
+i is 17 sum is 153
+i is 18 sum is 171
+i is 19 sum is 190
+i is 20 sum is 210
+i is 21 sum is 231
+i is 22 sum is 253
+i is 23 sum is 276
+i is 24 sum is 300
+i is 25 sum is 325
+i is 26 sum is 351
+i is 27 sum is 378
+i is 28 sum is 406
+i is 29 sum is 435
+i is 30 sum is 465
+The sum is 465
