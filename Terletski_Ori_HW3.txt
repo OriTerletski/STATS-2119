@@ -1,0 +1,70 @@
+Ori Terletski
+02/15/2021
+                                           Homework 3
+                                        
+                                          Github link:
+                             https://github.com/OriTerletski/STATS-2119
+                                           
+                                           
+marks = {'Andy': 88, 'Amy': 66, 'James': 90, 'Jules': 55, 'Arthur': 77} #Question 0, create a dictionary 
+marks
+
+{'Andy': 88, 'Amy': 66, 'James': 90, 'Jules': 55, 'Arthur': 77}
+
+for student, grade in marks.items(): #Question 1, Using for loop, print out all the students name and their grade
+    print(f'{student} got {grade} on the exam')
+    
+Andy got 88 on the exam
+Amy got 66 on the exam
+James got 90 on the exam
+Jules got 55 on the exam
+Arthur got 77 on the exam
+
+students_grades = [88, 66, 90, 55, 77] #Question 2, , calculate all the student’s mean grade, maximal grade, and minimal grade
+def students_grades_sum(scores):
+    total = 0
+    for score in scores:
+        total += score
+    return total
+def grades_mean(students_grades):
+    return grades_sum(students_grades) / float(len(students_grades))
+print("The mean grade is:", grades_mean(students_grades))
+print("The maximal grade is:", max(students_grades))
+print("The minimal grade is:", min(students_grades))
+
+The mean grade is: 75.2
+The maximal grade is: 90
+The minimal grade is: 55
+
+marks = {'Andy': 88, 'Amy': 66,'James': 90, 'Jules': 55, 'Arthur': 77} #Question 3
+for student_name in marks.keys():
+    print(student_name, end='  ')
+    if student_name[:1] == 'J':
+            break
+
+Andy  Amy  James 
+
+marks = {'Andy': 88, 'Amy': 66,'James': 90, 'Jules': 55, 'Arthur': 77} #Question 4
+for student_name in marks.keys():
+    print(student_name, end='  ')
+    if student_name[:1] == 'J':
+            continue
+
+Andy  Amy  James  Jules  Arthur
+
+def student_score(student_name):   # Question 5
+    marks = {'Andy': 88, 'Amy': 66,'James': 90, 'Jules': 55, 'Arthur': 77}
+    for student in marks:
+        if student == student_name:
+            print (marks[student])
+            break
+    else:
+        print ('cannot find this student’s name')
+
+student_score("Andy")
+student_score("Ori") 
+
+88
+cannot find this student’s name
+     
+
