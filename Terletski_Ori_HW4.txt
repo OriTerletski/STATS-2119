@@ -1,0 +1,115 @@
+Ori Terletski
+G23028954
+
+                                           Homework 4 
+                                           
+                           https://github.com/OriTerletski/STATS-2119
+                           
+                           
+import numpy as np   #question 1, Creating an array with the array function of numpy. 
+numbers = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+numbers 
+
+output:
+
+array([[ 1,  2,  3,  4],
+       [ 5,  6,  7,  8],
+       [ 9, 10, 11, 12]])
+       
+numbers = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])  #I added this to practice the printing as well
+for row in numbers:
+    for column in row:
+        print(column, end =' ')
+    print()
+    
+output:
+
+1 2 3 4 
+5 6 7 8 
+9 10 11 12 
+
+import numpy as np   #Question 2
+X_Points = np.arange (1, 7)
+Y_Points = np.arange (5, 11)
+print ("The X points are", X_Points)
+print ("The Y points are", Y_Points)
+
+output:
+
+The X points are [1 2 3 4 5 6]
+The Y points are [ 5  6  7  8  9 10]
+
+
+import matplotlib.pyplot as plt  #Question 3 
+import numpy as np
+
+X_Points = np.array([1, 6])
+Y_Points = np.array([5, 10])
+
+plt.plot(X_Points, Y_Points)
+plt.show()
+
+output:
+
+# I didn't know how to attach the graph to the txt file, but a screenshot of the graph is in the word doc I submitted on blackboard. 
+
+import matplotlib.pyplot as plt #Question 4 
+import numpy as np
+
+y1 = np.array([1, 2, 3, 4])
+y2 = np.array([4, 5, 6, 7])
+y3 = np.array([7, 8, 9, 10])
+
+plt.plot(y1)
+plt.plot(y2)
+plt.plot(y3)
+
+plt.xlabel("X Label")
+plt.ylabel("Y Label")
+
+plt.show()
+
+output:
+
+# I didn't know how to attach the graph to the txt file, but a screenshot of the graph is in the word doc I submitted on blackboard.
+
+
+import matplotlib.pyplot as plt #Question 5, creating my own subplot 
+import numpy as np
+
+x = np.array([7, 10, 4, 1, 10])
+y = np.array([45, 1, 8, 34, 4])
+
+plt.subplot(6, 8, 4)
+plt.plot(x,y)
+
+
+x = np.array([9, 21, 43, 2, 2])
+y = np.array([1, 32, 24, 47, 7])
+
+plt.subplot(10, 3, 9)
+plt.plot(x,y)
+
+
+x = np.array([25, 21, 10, 3, 2])
+y = np.array([1, 5, 9, 2, 4])
+
+plt.subplot(2, 6, 1)
+plt.plot(x,y)
+
+plt.show()
+
+output:
+
+# I didn't know how to attach the graph to the txt file, but a screenshot of the graph is in the word doc I submitted on blackboard.
+
+
+
+
+
+
+
+
+
+
+       
