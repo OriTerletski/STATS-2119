@@ -1,0 +1,147 @@
+Ori Terletski
+G23028954
+03/23/2021
+                                         Midterm Project
+                                         
+                                         
+def Frequencies(List_Of_Elements):  #Question 1 , Find the frequency of each distinct element in the list using a dictionary. 
+    frequncy = {}
+    for item in List_Of_Elements:
+        if (item in frequncy):
+            frequncy[item] += 1
+        else:
+            frequncy[item] = 1
+    for key, value in frequncy.items():
+        print ("% d : % d"%(key, value))
+if __name__ == "__main__": 
+    List_Of_Elements =[2,4,6,8,4,5,2,1,9,0,4,6,7,4,3,2,1,9,10,3,7,9,6,0,1,3,5,6,7,8,9,10,2,3,6,8,9,10,6,7,4,3]
+  
+    print (Frequencies(List_Of_Elements))                                        
+
+Output: 
+
+2 :  4
+ 4 :  5
+ 6 :  6
+ 8 :  3
+ 5 :  2
+ 1 :  3
+ 9 :  5
+ 0 :  2
+ 7 :  4
+ 3 :  5
+ 10 :  3
+None
+
+import matplotlib.pyplot as plt   #Plot the frequency results, e.g. using bar chart. 
+Elements = ['2','4','6','8','5', '1', '9', '0', '7', '3', '10']
+Frequencies = [4,5,6,3,2, 3, 5, 2, 4, 5, 3]
+
+plt.bar(Elements, Frequencies)
+plt.title('Elements Frequencies')
+plt.xlabel('Elements')
+plt.ylabel('Frequencies')
+plt.show()
+
+Output:
+
+# I didn't know how to attach the graph to the txt file, but a screenshot of the graph is in the word doc I submitted on blackboard.
+
+import json #Store this dictionary results into json file.
+x = { 2 :  4, 4 : 5, 6 : 6, 8 : 3, 5 : 2, 1 : 3, 9 : 5, 0 : 2, 7 : 4, 3 : 5, 10 : 3}
+y = json.dumps(x)
+print(y)
+
+Output:
+
+{"2": 4, "4": 5, "6": 6, "8": 3, "5": 2, "1": 3, "9": 5, "0": 2, "7": 4, "3": 5, "10": 3}
+
+import pandas as pd #Question 2, Finding the location of Jason file on my computer 
+import os
+os.getcwd()
+
+Output: 
+
+'/Users/oriterletski/STATS class'
+
+
+import pandas as pd #Import and Format Your Data
+
+df = pd.read_json('your_posts_1.json')
+
+df.head(3)
+
+Output: 
+
+# I didn't know how to attach the table to the txt file, but a screenshot of the stable is in the word doc I submitted on blackboard.
+
+df.rename(columns={'timestamp': 'date'}, inplace=True)
+df = df.drop(['attachments', 'title', 'tags'], axis=1)
+pd.to_datetime(df['date'])
+df.head(3)
+
+Output: 
+
+# I didn't know how to attach the table to the txt file, but a screenshot of the table is in the word doc I submitted on blackboard.
+
+print(df.shape)
+df.tail(3)
+
+Output: 
+
+(473, 2)
+
+# I didn't know how to attach the table to the txt file, but a screenshot of the table is in the word doc I submitted on blackboard.
+
+df = df.set_index('date') #Figuring Out Monthly Post Count
+post_counts = df['data'].resample('MS').size()
+post_counts
+
+Output: 
+
+date
+2012-09-01     7
+2012-10-01     6
+2012-11-01    16
+2012-12-01    13
+2013-01-01    15
+              ..
+2018-05-01     0
+2018-06-01     0
+2018-07-01     1
+2018-08-01     0
+2018-09-01     1
+Freq: MS, Name: data, Length: 73, dtype: int64
+
+
+
+import matplotlib.pyplot as plt #Visualize Your Facebook Usage
+import seaborn as sns
+import numpy as np
+
+sns.set(rc={'figure.figsize':(40,20)})
+sns.set(font_scale=3)
+
+x_labels = post_counts.index
+
+
+sns.barplot(x_labels, post_counts, color="blue")
+
+tick_positions = np.arange(10, len(x_labels), step=24)
+
+
+plt.xticks(tick_positions, x_labels[tick_positions].strftime("%Y"))
+
+plt.show()
+
+Output: 
+
+# I didn't know how to attach the graph to the txt file, but a screenshot of the graph is in the word doc I submitted on blackboard.
+
+
+
+
+
+
+
+                                         
