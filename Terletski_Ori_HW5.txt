@@ -1,0 +1,110 @@
+Ori Terletski
+G23028954
+
+                                                HW 5 
+
+
+
+1a) The code should print out the time 5:30.
+
+class Clock():
+    def __init__(self, time):
+        self.time = time
+    def print_time (self):
+        time = '6:30'
+        print(self.time)
+        
+clock = Clock('5:30')
+clock.print_time()
+
+Output: 
+
+5:30
+
+
+b) The code printed out 5:30 because we created an object and then executed the printname method. By using the int command we initiated the class and then created the new object. 
+
+2a) The code should print out the time 10:30.
+
+class Clock():
+    def __init__(self, time):
+        self.time = time
+    def print_time(self, time):
+        print(time)
+        
+clock = Clock('5:30')
+clock.print_time('10:30')
+
+Output:
+
+10:30
+
+ b) Giving the same names for the parameters and the object attributes is not compulsory. However, it allows us to not only reference the values within our definition, but also 
+keep track with the ‘self’ attribute. 
+
+
+
+3a) The code should print out the times in Boston and Paris – 5:30 and 10:30 respectively 
+
+
+class Clock():
+    def __init__(self, time):
+        self.time = time
+    def print_time (self):
+        print(self.time)
+        
+class Clock1(Clock):
+    pass
+
+boston_clock =  Clock('5:30')
+paris_clock = Clock1('10:30')
+
+boston_clock.print_time()
+paris_clock.print_time()
+
+Output:
+
+5:30
+10:30
+
+b) Paris clock and Boston clock are different objects because Paris clock is coded by using ‘Clock1’ while Boston clock is coded by using ‘Clock’ only. 
+
+
+Q4)
+
+class Queue():
+    def __init__(self):
+        self.value = []
+        
+    def print (self):
+        print (self.value)
+    
+    def insert (self, number):
+        self.value.append (number)
+    
+    def remove (self):
+        try:
+            del self.value[0]
+        except:
+            print ("the queue is empty")
+            
+queue = Queue()
+queue.insert(5)
+queue.insert(6)
+queue.print()
+
+queue.insert(7)
+queue.remove()
+queue.print()
+
+queue.remove()
+queue.remove()
+queue.remove()
+
+Output: 
+
+[5, 6]
+[6, 7]
+the queue is empty
+
+
