@@ -1,0 +1,140 @@
+Ori Terletski 
+
+Professor Fang Jin
+
+STAT 1129
+
+05/07/2021
+
+
+                                                                                          HW 6
+
+                                                                        https://github.com/OriTerletski/STATS-2119
+
+
+#Question 1, create the following two matrixes
+
+First_metrix <- matrix(c(7, 2, 9, 4, 12, 13), ncol = 3, nrow = 2) 
+second_metrix <- matrix(c(1,2,3,7,8,9,12,13,14,19,20,21), ncol = 4, nrow = 3)
+first_metrix
+second_metrix
+
+Output:
+
+# I couldn't attach the image to the txt file, but a screenshot of the image is in the word doc I submitted on blackboard. 
+ 
+
+#do the matrix multiplication
+
+first_metrix%*%second_metrix
+
+Output:
+
+# I couldn't attach the image to the txt file, but a screenshot of the image is in the word doc I submitted on blackboard.  
+
+
+#Question 2, 
+
+#a) Create a data frame like requested in the homework assignment  
+
+
+table_data_frame <- data.frame ( 
+    id = c(1:5), 
+    name = c("Peter", "Amy", "Ryan", "Gary", "Michelle"), 
+    salary = c(623.30, 515.20, 611.00, 729.00, 843.25))
+
+table_data_frame
+
+Output:
+
+# I couldn't attach the image to the txt file, but a screenshot of the image is in the word doc I submitted on blackboard. 
+
+ 
+#b) add a column of “department”, and assign department names for the 5 persons.
+
+updated_table_data_frame <- cbind(table_data_frame,"department"=c("Human Resources","Marketing","Risk Management","Operations","Finance"))
+updated_table_data_frame
+
+Output:
+
+# I couldn't attach the image to the txt file, but a screenshot of the image is in the word doc I submitted on blackboard. 
+ 
+
+# c) Extract 1st, 3rd, and 5th rows, with 2nd and 3rd columns, using c function
+
+extracted_table_data_frame <- updated_table_data_frame[c(1,3,5), c(2:3)]
+extracted_table_data_frame
+
+Output:
+
+# I couldn't attach the image to the txt file, but a screenshot of the image is in the word doc I submitted on blackboard. 
+
+
+# d) plot a bar chart to show the salary of row 1,4,5 and label the bar with people’s name correspondingly
+
+salary_values <- c(623.20, 729.00, 843.25)
+workers_names <- c("Peter", "Gary", "Michelle")
+barplot(names.arg = workers_names, salary_values, ylab = "Salary", xlab = "Name")
+
+Output:
+
+# I couldn't attach the image to the txt file, but a screenshot of the image is in the word doc I submitted on blackboard. 
+
+ 
+# e) plot a pie chart, based on this data framework, only showing the highest salary, lowest salary, and median salary, give your plot a title, and label each pie
+
+salaries <- c(515.20, 623.30, 843.25)
+
+pie_labels <- c("Lowest", "Median", "Highest")
+
+pie_colors <- c("purple", "blue", "gold") 
+
+pie(salaries, label = pie_labels, col = pie_colors, main = "Compensation Distribution Pie Chart")
+
+legend("topright", pie_labels, fill = pie_colors)
+
+
+Output:
+
+# I couldn't attach the image to the txt file, but a screenshot of the image is in the word doc I submitted on blackboard. 
+
+
+
+# Question 3) Pick two functions in your final project, transfer that into R programming. One function should involve  “if else” , the other function should involve “for loop or while loop”.
+
+#Since I did not use a for/while loop function in my final project, I rewrote the random function in the project using a while loop in python:
+
+#def random(self):  #new project python random function
+        #take_by_computer = random_take(game_takes)
+        #game_takes = ["R", "P", "S"] 
+        #while random == random:
+            #return take_by_computer        
+random
+
+#my R code conversion for the above mentioned code:
+
+game_takes = c("R", "P", "S") #ready
+random <- c()
+number_of_games = 50
+for (i in 1:number_of_games) {
+  take_by_computer = sample(size = 1, game_takes)
+  random <- append(random, take_by_computer)}
+random
+
+
+#My ‘if else’ python code for the validation function from the final project: 
+
+#def valid():
+    #global user_hand
+    #global possible_choices
+    #if user_hand not in possible_choices:
+        #user_hand=input('Invalid input, please try again. Input rock, paper, or scissors:')
+        #valid()
+
+
+#My R conversion  for the validation function from the project: 
+
+game_options <- c("R", "P", "S")
+validation_check <- function(){for (game_option in game_options) { if (game_option == player_move) {print("player move is valid")}}}
+player_move <- c("selection") 
+validation_check
